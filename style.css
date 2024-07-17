@@ -1,125 +1,176 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-body {
-    font-family: "Mulish", sans-serif;
-}
-
 /* default styles */
 * {
+    box-sizing: border-box;
+    padding: 0;
     margin: 0;
 }
 
-.container {
-    width: 80%;
-    margin: 5rem auto;
-    border-radius: 1rem;
+body {
+    font-family: "Mulish", sans-serif;
+    width: 73rem;
+    margin: 0 auto;
 }
 
-h3 {
-    font-size: 2.25rem;
-    text-align: center;
-    font-weight: 800;
-}
-
-.orange {
-    color: rgb(255, 84, 0);
-}
-
-p,
-li {
-    font-size: 1.125rem;
-    font-weight: normal;
-    line-height: normal;
-    text-align: center;
-}
-
-/* navbar */
-.nav-bar {
+/* navigation bar */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 3.25rem 0;
+
 }
 
-.logo {
+.brand {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: 280px;
+    gap: 1rem;
 }
 
-.logo img {
-    width: 48px;
-    margin-right: 0.5rem;
+.brand h3 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: black;
 }
 
-.nav-options {
+.brand h3>span {
+    color: rgb(255, 84, 0);
+}
+
+.menu {
     display: flex;
-    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.75rem;
+    color: rgb(66, 66, 71);
+    font-size: 1.1rem;
+    font-weight: 400;
 }
 
-.nav-options p {
-    cursor: pointer;
+.menu p:nth-of-type(1) {
+    color: rgb(255, 84, 0);
 }
 
 /* banner */
-.explore-your-travel {
-    background-image: linear-gradient(180deg, rgba(19, 19, 24, 0.8) 0%, rgba(19, 19, 24, 0) 100%), url('Images/Group\ 13\ \(1\)\ \(1\).png');
-    padding: 7rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.banner {
+    background-image: linear-gradient(180.00deg, rgba(19, 19, 24, 0.8), rgba(19, 19, 24, 0) 100%), url("Images/Group\ 13\ \(1\)\ \(1\).png");
+    height: 500px;
+    margin-bottom: 100px;
+    border-radius: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.explore-container h3 {
-    color: white;
+.banner h1 {
+    color: rgb(255, 255, 255);
     font-size: 4rem;
     font-weight: 800;
 }
 
-.explore-container p {
-    color: rgb(226, 226, 226);
-    font-size: 18px;
-    line-height: 26px;
-    width: 676px;
-    padding: 1.5rem 0;
-    margin: auto;
+.banner p {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    width: 42.25rem;
+    font-weight: 400;
+    margin: 1.5rem 0 3rem;
+    text-align: center;
 }
 
-.travel-inputs {
-    margin-top: 2rem;
+.search-container {
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 1rem;
+    background: rgba(255, 255, 255, 0.3);
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
     backdrop-filter: blur(4px);
 }
 
-input,
-select {
-    width: 175px;
-    height: 50px;
-    padding: 0 0.5rem;
-    margin: 0 1rem;
+.search-container input,
+.search-container select,
+.search-container button {
+    width: 11rem;
+    height: 3.25rem;
     border-radius: 8px;
     border: none;
-    cursor: pointer;
-    font-size: 1rem;
+    text-align: center;
+    outline: none;
 }
 
-.btn-primary {
-    width: 175px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    padding: 0.7rem 1.2rem;
+.search-container input::placeholder {
+    color: rgba(19, 19, 24, 0.5);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.search-container button {
     background-color: rgb(255, 84, 0);
-    color: white;
-    border: 1px solid rgb(255, 84, 0);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.search-container select {
+    color: rgba(19, 19, 24, 0.5);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* popular tours */
+.popular-tours {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 550px;
+}
+
+.text-area {
+    height: 100%;
+    width: 36rem;
+}
+
+.text-area h2 {
+    color: rgb(19, 19, 24);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-top: 0;
+}
+
+.text-area ul li+li {
+    margin-top: 1rem;
+}
+
+.text-area p {
+    margin: 24px 0 24px;
+    line-height: 26px;
+}
+.text-area ul li {
+    line-height: 26px;
+    margin-left: 1rem;
+}
+
+.text-area p:nth-of-type(2) {
+    margin-bottom: 0;
+}
+
+.text-area button {
+    background-color: rgb(255, 84, 0);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 11rem;
+    height: 3.25rem;
     border-radius: 8px;
+    border: none;
+    text-align: center;
+    margin-top: 32px;
+}
+.popular-tours .image img {
+    border-radius: 16px;
 }
